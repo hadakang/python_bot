@@ -38,4 +38,4 @@ df['ror'] = np.where(df['high'] > df['target'],
 df['hpr'] = df['ror'].cumprod() # cumprod 도대체 뭐가 문제지...?
 df['dd'] = (df['hpr'].cummax() - df['hpr']) / df['hpr'].cummax() * 100
 print("MDD: ", df['dd'].max())
-print("HPR: ", df['hpr'][-2])
+print("HPR: ", df['hpr'].iloc[-2])
